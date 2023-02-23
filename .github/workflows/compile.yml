@@ -11,7 +11,7 @@ jobs:
               fqbn: Inkplate_Boards:esp32:Inkplate6
             additional-sketch-paths: |
               - examples
-            cli-compile-flags: "--warnings none
+            cli-compile-flags: --warnings none
     steps:
       - name: Checkout
         uses: actions/checkout@v2
