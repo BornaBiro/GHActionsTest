@@ -30,8 +30,9 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  float a = 5;
-  uint8_t *ptr = &a;
+  float a;
+  float b;
+  float c;
     
   digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);                       // wait for a second
