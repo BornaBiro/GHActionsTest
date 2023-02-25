@@ -33,4 +33,4 @@ jobs:
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
           cli-compile-flags: |
-            - b esp32:esp32:esp32 --warnings none
+            - -b esp32:esp32:esp32 --warnings none
