@@ -32,4 +32,3 @@ jobs:
             - name: Time
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
-          cli-compile-flags: "--warnings none"
