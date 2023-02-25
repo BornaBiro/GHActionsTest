@@ -8,7 +8,7 @@ jobs:
       matrix:
         include:
           - board:
-              fqbn: bornaDasduino:esp32:Inkplate6
+              fqbn: Inkplate_Boards:esp32:Inkplate6
             additional-sketch-paths: |
               - examples
     steps:
@@ -21,8 +21,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           platforms: |
-            - source-url: https://raw.githubusercontent.com/BornaBiro/TestBoardDefinition/main/package_myDasduino_index.json
-              name: bornaDasduino:esp32
+            - source-url: https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE/raw/fixes/package_Dasduino_Boards_index.json
+              name: Inkplate_Boards:esp32
 
           fqbn: ${{ matrix.board.fqbn }}
           libraries: |
