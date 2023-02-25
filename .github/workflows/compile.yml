@@ -11,7 +11,6 @@ jobs:
               fqbn: Inkplate_Boards:esp32:Inkplate6
             additional-sketch-paths: |
               - examples
-            extra-arduino-cli-args: "--warnings default"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -26,7 +25,6 @@ jobs:
               name: Inkplate_Boards:esp32
 
           fqbn: ${{ matrix.board.fqbn }}
-          extra-arduino-cli-args: ${{ matrix.extra-arduino-cli-args }}
           libraries: |
             - source-path: ./
             - name: "Adafruit BME680 Library"
@@ -34,3 +32,4 @@ jobs:
             - name: Time
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
+          cli-compile-flags: "--warnings none"
