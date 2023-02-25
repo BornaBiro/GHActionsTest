@@ -32,4 +32,4 @@ jobs:
             - name: Time
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
-          warnings: -Wno-deprecated-declarations
+          cli-compile-flags: -Wall
