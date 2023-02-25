@@ -8,7 +8,9 @@ jobs:
       matrix:
         include:
           - board:
-              fqkkkldfbn: Inkplate_Boards:esp32:Inkplate6
+              fqbn: Inkplate_Boards:esp32:Inkplate6
+              cli-compile-flags: |
+                - --warnings "default"
             additional-sketch-paths: |
               - examples
     steps:
