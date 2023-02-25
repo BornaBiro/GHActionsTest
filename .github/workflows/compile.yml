@@ -9,8 +9,6 @@ jobs:
         include:
           - board:
               fqbn: Inkplate_Boards:esp32:Inkplate6
-              cli-compile-flags: |
-                - --warnings "default"
             additional-sketch-paths: |
               - examples
     steps:
@@ -34,3 +32,4 @@ jobs:
             - name: Time
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
+          warnings: -Wno-deprecated-declarations
