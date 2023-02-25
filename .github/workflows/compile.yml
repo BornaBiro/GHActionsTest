@@ -8,7 +8,7 @@ jobs:
       matrix:
         include:
           - board:
-              fqbn: esp32:esp32:esp32
+              fqbn: Inkplate_Boards:esp32:Inkplate6
             additional-sketch-paths: |
               - examples
     steps:
@@ -21,8 +21,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           platforms: |
-            - source-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-              name: esp32:esp32
+            - source-url: https://github.com/e-radionicacom/Dasduino-Board-Definitions-for-Arduino-IDE/raw/master/package_Dasduino_Boards_index.json
+              name: Inkplate_Boards:esp32
 
           fqbn: ${{ matrix.board.fqbn }}
           libraries: |
@@ -33,4 +33,4 @@ jobs:
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
           cli-compile-flags: |
-            - -b esp32:esp32:esp32 --warnings none
+            - -b Inkplate_Boards:esp32:Inkplate6 --warnings none
