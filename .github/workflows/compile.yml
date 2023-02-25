@@ -11,9 +11,7 @@ jobs:
               fqbn: Inkplate_Boards:esp32:Inkplate6
             additional-sketch-paths: |
               - examples
-            cli-compile-flags: |
-                - “compiler.c.extra_flags=-Wno-error”
-                - “compiler.cpp.extra_flags=-Wno-error”
+            extra-arduino-cli-args: "--warnings default"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
