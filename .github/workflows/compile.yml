@@ -22,7 +22,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           platforms: |
             - source-url: https://github.com/e-radionicacom/Dasduino-Board-Definitions-for-Arduino-IDE/raw/master/package_Dasduino_Boards_index.json
-              name: Inkplate_Boards
+              name: esp32:esp32
 
           fqbn: ${{ matrix.board.fqbn }}
           libraries: |
