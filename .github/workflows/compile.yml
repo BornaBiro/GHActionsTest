@@ -8,7 +8,7 @@ jobs:
       matrix:
         include:
           - board:
-              fqbn: esp32:esp32:esp32
+              fqbn: esp32:esp32:esp3212
             additional-sketch-paths: |
               - examples
     steps:
