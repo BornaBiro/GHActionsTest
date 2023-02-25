@@ -11,7 +11,6 @@ jobs:
               fqbn: esp32:esp32:esp32
             additional-sketch-paths: |
               - examples
-            cli-compile-flags: --warnings none
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,6 +20,7 @@ jobs:
         uses: arduino/compile-sketches@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          cli-compile-flags:
           platforms: |
             - source-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
               name: esp32:esp32
