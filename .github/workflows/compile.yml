@@ -20,7 +20,6 @@ jobs:
         uses: arduino/compile-sketches@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          cli-compile-flags: ${{--warnings "none"}}
           platforms: |
             - source-url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
               name: esp32:esp32
@@ -33,3 +32,4 @@ jobs:
             - name: Time
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
+          cli-compile-flags: --warnings none
