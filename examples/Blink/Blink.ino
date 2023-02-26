@@ -23,6 +23,7 @@
 */
 
 #include "MFRC522-SOLDERED.h"
+#include <ArduinoJson.h>
 
 // the setup function runs once when you press reset or power the board
 void setup() {
