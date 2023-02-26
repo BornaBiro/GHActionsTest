@@ -26,10 +26,7 @@ jobs:
 
           fqbn: ${{ matrix.board.fqbn }}
           libraries: |
-            - source-path: ./
-            - name: "Adafruit BME680 Library"
-            - name: ArduinoJson
-            - name: Time
+            - source-path: https://github.com/SolderedElectronics/Soldered-MFRC522-RFID-Reader-Arduino-Library.git
           sketch-paths: |
             ${{ matrix.additional-sketch-paths }}
           cli-compile-flags: |
