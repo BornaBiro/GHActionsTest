@@ -17,12 +17,12 @@ jobs:
       - name: Install ESP32 platform dependencies
         run: pip3 install pyserial
       - name: Compile examples
-        uses: arduino/compile-sketches@v1
+        uses: arduino/compile-sketches@v1.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           platforms: |
             - source-url: https://github.com/SolderedElectronics/Dasduino-Board-Definitions-for-Arduino-IDE/raw/fixes/package_Dasduino_Boards_index.json
-              name: Inkplate_Boards:esp32
+              name: Inkplate_Boards:esp32@3.0.2
 
           fqbn: ${{ matrix.board.fqbn }}
           libraries: |
