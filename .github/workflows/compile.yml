@@ -34,4 +34,4 @@ jobs:
             ${{ matrix.additional-sketch-paths }}
           verbose: true
           cli-compile-flags: |
-            -  b ${{ matrix.fqbn }} --warnings "none"
+            -  -b ${{ matrix.board.fqbn }} --warnings "none"
