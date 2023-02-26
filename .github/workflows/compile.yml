@@ -34,4 +34,4 @@ jobs:
             ${{ matrix.additional-sketch-paths }}
           cli-compile-flags: |
             - --verbose
-            - --warnings all
+            - --warnings="none"
